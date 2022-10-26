@@ -23,6 +23,10 @@
                 <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="proy_nom">
             </div>
             <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Fecha</label>
+                <input type="date" class="form-control" id="exampleInputPassword1" name="proy_date">
+            </div>
+            <div class="mb-3">
                 <label for="exampleInputPassword1" class="form-label">Descripción</label>
                 <input type="text" class="form-control" id="exampleInputPassword1" name="proy_desc">
             </div>

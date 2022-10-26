@@ -9,14 +9,15 @@ include "Config/Conexion.php";
 $j = 0;     // Variable for indexing uploaded image.
 $target_path = "uploads/";     // Declaring Path for uploaded images.
 
-$stmt = mysqli_prepare($conexion, "UPDATE  tm_proyecto SET proy_nom=?,proy_desc=? WHERE proy_id = {$_POST['proy_id']}");
+$stmt = mysqli_prepare($conexion, "UPDATE  tm_proyecto SET proy_nom=?,proy_desc=?,proy_date=? WHERE proy_id = {$_POST['proy_id']}");
 // ss por que son 2 string
-mysqli_stmt_bind_param($stmt, 'ss', $proy_nom, $proy_desc);
+mysqli_stmt_bind_param($stmt, 'sss', $proy_nom, $proy_desc , $proy_date);
 
 // validamos que se enviaron los campos
 
 $proy_nom = isset($_POST['proy_nom']) ? $_POST['proy_nom'] : 0;
 $proy_desc = isset($_POST['proy_desc']) ?  $_POST['proy_desc'] : 0 ;
+$proy_date = isset($_POST['proy_date']) ?  date("Y-m-d H:i:s",strtotime($_POST['proy_date'])) : '' ;
 // esto es igual a un if else
 // expresion_a_evaluar ? si_es_true : si_no_else;
 

@@ -27,6 +27,7 @@
                         <th scope="col">#</th>
                         <th scope="col">Nombre</th>
                         <th scope="col">Descripción</th>
+                        <th scope="col">Fecha</th>
                         <th scope="col">Imagen</th>
                         <th scope="col">Acciones</th>
                     </tr>
@@ -46,6 +47,7 @@
                             <td> <?php echo $row['proy_id'] ?> </td>
                             <td><?php echo $row['proy_nom'] ?></td>
                             <td><?php echo $row['proy_desc'] ?></td>
+                            <td><?php echo $row['proy_date'] ?></td>
                             <td>
                                 <img style="width: 200px;" src="<?php echo "http://localhost/Proyectos/".$images['ima_path'] ?>" alt=""> 
                             </td>
